@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#"><ion-icon name="home">1</ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="person">2</ion-icon></a>
+      </li>
+      <li class="active">
+        <a href="#"><ion-icon name="circle"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="setting">3</ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="chatbubble">4</ion-icon></a>
+      </li>
+      <div id="marker"></div>
+    </ul>
+  </body>
+  <script>
+    let marker = document.querySelector('marker')
+    let list = document.querySelectorAll('ul li')
+
+    function moveIndicator(e) {
+      marker.style.left = e.offsetLeft + 'px'
+      marker.style.width = e.offsetWidth + 'px'
+    }
+
+    list.forEach(link => {
+      link.addEventListener('mousemove', e => {
+        moveIndicator(e.target)
+      })
+    })
+
+    function activeLink() {
+      list.forEach(item => item.classList.remove('active'))
+      this.classList.add('active')
+    }
+    list.forEach(item => item.addEventListener('mouseover', activeLink))
+  </script>
+</html>
