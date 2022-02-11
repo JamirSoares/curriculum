@@ -1,14 +1,10 @@
-var http = require('http'),
-    fs = require('fs');
+const http = require("http");
+const express = require("express");
+const app = new express();
+var path    = require("path");
 
-
-fs.readFile('./index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(3000);
+app.get('/', function(request, response){
+    response.sendFile(path.join(__dirname+'/index.html'));
 });
+
+http.createServer(app).listen(3000, () => console.log("Servidor rodando local na porta 3000"));
