@@ -1,0 +1,22 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "description": "curriculum page",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamirSoares/curriculum.git"
+  },
+  "author": "jamir soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamirSoares/curriculum/issues"
+  },
+  "homepage": "https://github.com/JamirSoares/curriculum#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
