@@ -1,39 +1,33 @@
 html,
 body {
-  width: 99.7%;
-  height: 99%;
-  background: #030518;
-  color:white;
-  
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(#250043 0%, #050047 100%);
+    color:white;
+    scroll-behavior: smooth;
 }
 
-.container{
-  height: 100%;
-   width: 100%;    
-  font-size: 2em;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.box {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
 }
 
-left-side{
-  position: fixed;
-  top: 0px;
-  left: 0px;
+.box .left-side {
   font-size: 1em;
-  height: 100%;
-  width: 337px;
+  flex-grow: 0;
+  flex-basis: auto;
   border-right: solid;
   border-width:1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0a0c21;
-  
+  position: fixed;
+  height: 100vh;
 }
-
 .photo{
+color: white;
+  font-size: 1em;
   position: relative;
   margin-top: 90px;
   margin-bottom: 10px;
@@ -42,18 +36,19 @@ left-side{
   border-style: solid;
   border-radius: 100%;
   border-width: 1px;
-  background-image: url("/assents/imagens/photos.jpg") ;
+  /* background-image: url("/assents/imagens/photos.jpg") ; */
   background-size:100% ;
   
 }
 .text{
-  display: flex;
+  display: inline;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0.5;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-
 .name{  
   position: relative;
   left: 0px;  
@@ -63,30 +58,70 @@ left-side{
   font-size:0.9em ;
   margin-top: 0px;
 }
-
 .icons{
+  
   margin: 10px;
-  width:  40px;
+  width:  30px;
 }
 
-center{
-  border-color:white;
-  border-style: solid;
-  width: 80%;
-  height: 100%;
+.box .mid {
+    flex-grow: 1;
+    flex-basis: auto;
 }
-right-side{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 1em;
-  height: 100%;
-  border-left: solid;
-  border-width:1px;
+
+
+.home{
+  font-size: 1.5em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: #0a0c21;
+  align-items: center;
+  height: 100%;
+  text-align: left;   
 }
+
+.home .greetings{
+  text-indent: 5.8em;
+}
+.home .texto{
+  text-indent: 2em;
+}
+
+.home .text-box{
+  
+  width: 400px;
+  position: absolute;
+  right: 400px; 
+}
+.home img{
+  width: 500px;
+  position: absolute;
+  left: 450px;
+}
+
+.projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+}
+.projects img{
+  margin-right:100vh ;  
+}
+
+.box .right-side {
+    flex-grow: 0;
+    flex-basis: 100px;
+    border-left: solid;
+    border-width:1px;
+    display: flex;
+    position: fixed;
+    right: 0px;
+    height: 100vh;
+    justify-content: center;    
+  }
+  
 .bottom{
   position: absolute;
   bottom: 50px;
@@ -104,5 +139,3 @@ right-side{
   position: relative;   
   right: 0px; 
 }
-
-*{margin: 0; padding: 0;}
