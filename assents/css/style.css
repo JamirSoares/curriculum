@@ -3,7 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     background: radial-gradient(#250043 0%, #050047 100%);
-    color:white;
+    color: white;
     scroll-behavior: smooth;
 }
 
@@ -14,54 +14,57 @@ body {
 }
 
 .box .left-side {
-  font-size: 1em;
-  flex-grow: 0;
-  flex-basis: auto;
-  border-right: solid;
-  border-width:1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  height: 100vh;
+    font-size: 1em;
+    flex-grow: 0;
+    flex-basis: auto;
+    border-right: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
 }
-.photo{
-color: white;
-  font-size: 1em;
-  position: relative;
-  margin-top: 90px;
-  margin-bottom: 10px;
-  width: 90px;
-  height: 90px;
-  border-style: solid;
-  border-radius: 100%;
-  border-width: 1px;
-  /* background-image: url("/assents/imagens/photos.jpg") ; */
-  background-size:100% ;
-  
+
+.photo {
+    color: white;
+    font-size: 1em;
+    position: relative;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 90px;
+    border-style: solid;
+    border-radius: 100%;
+    border-width: 1px;
+    background-image: url("/assents/imagens/photos.jpg");
+    background-size: 100%;
 }
-.text{
-  display: inline;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.5;
-  margin-left: 20px;
-  margin-right: 20px;
+
+.text {
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-.name{  
-  position: relative;
-  left: 0px;  
-  margin-bottom: 0px;  
+
+.name {
+    position: relative;
+    left: 0px;
+    margin-bottom: 0px;
 }
-.description{
-  font-size:0.9em ;
-  margin-top: 0px;
+
+.description {
+    font-size: 0.9em;
+    margin-top: 0px;
 }
-.icons{
-  
-  margin: 10px;
-  width:  30px;
+
+.icons {
+    margin: 10px;
+    width: 30px;
 }
 
 .box .mid {
@@ -69,73 +72,75 @@ color: white;
     flex-basis: auto;
 }
 
-
-.home{
-  font-size: 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: left;   
+.home {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: left;
 }
 
-.home .greetings{
-  text-indent: 5.8em;
-}
-.home .texto{
-  text-indent: 2em;
+.home .greetings {
+    text-indent: 5.8em;
 }
 
-.home .text-box{
-  
-  width: 400px;
-  position: absolute;
-  right: 400px; 
-}
-.home img{
-  width: 500px;
-  position: absolute;
-  left: 450px;
+.home .texto {
+    text-indent: 2em;
 }
 
-.projects{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-style: solid;
+.home .text-box {
+    width: 400px;
+    position: absolute;
+    right: 400px;
 }
-.projects img{
-  margin-right:100vh ;  
+
+.home img {
+    width: 500px;
+    position: absolute;
+    left: 450px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.projects img {
+    margin-right: 100vh;
 }
 
 .box .right-side {
     flex-grow: 0;
     flex-basis: 100px;
     border-left: solid;
-    border-width:1px;
+    border-width: 1px;
     display: flex;
     position: fixed;
     right: 0px;
     height: 100vh;
-    justify-content: center;    
-  }
-  
-.bottom{
-  position: absolute;
-  bottom: 50px;
+    justify-content: center;
 }
-.itens-up{  
-  margin: 15px 19px;
-  display:flex;  
-  position: relative;
-  right: 0px;
-  
+
+.bottom {
+    position: absolute;
+    bottom: 50px;
 }
-.itens-down{  
-  margin: 15px 19px;
-  display:block;  
-  position: relative;   
-  right: 0px; 
+
+.itens-up {
+    margin: 15px 19px;
+    display: flex;
+    position: relative;
+    right: 0px;
+}
+
+.itens-down {
+    margin: 15px 19px;
+    display: block;
+    position: relative;
+    right: 0px;
 }
