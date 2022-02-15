@@ -4,7 +4,7 @@ body {
     margin: 0;
     background: radial-gradient(#250043 0%, #050047 100%);
     color:white;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
 }
 
 .box {
@@ -25,7 +25,7 @@ body {
   position: fixed;
   height: 100vh;
 }
-.photo{
+#photo{
 color: white;
   font-size: 1em;
   position: relative;
@@ -33,21 +33,21 @@ color: white;
   margin-bottom: 10px;
   width: 90px;
   height: 90px;
-  border-style: solid;
   border-radius: 100%;
   border-width: 1px;
-  /* background-image: url("/assents/imagens/photos.jpg") ; */
+  background-image: url("/assents/imagens/photos.jpg") ;
   background-size:100% ;
   
 }
 .text{
-  display: inline;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0.5;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 1.5em;
 }
 .name{  
   position: relative;
@@ -59,7 +59,6 @@ color: white;
   margin-top: 0px;
 }
 .icons{
-  
   margin: 10px;
   width:  30px;
 }
@@ -68,7 +67,6 @@ color: white;
     flex-grow: 1;
     flex-basis: auto;
 }
-
 
 .home{
   font-size: 1.5em;
@@ -79,18 +77,19 @@ color: white;
   height: 100%;
   text-align: left;   
 }
-
-.home .greetings{
-  text-indent: 5.8em;
+#texto{
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.home .texto{
-  text-indent: 2em;
-}
 
-.home .text-box{
-  
+.home .text-box{  
   width: 400px;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-self: ce;
   right: 400px; 
 }
 .home img{
@@ -104,7 +103,8 @@ color: white;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-style: solid;
+  
+  height: 100vh;
 }
 .projects img{
   margin-right:100vh ;  
@@ -126,16 +126,92 @@ color: white;
   position: absolute;
   bottom: 50px;
 }
-.itens-up{  
-  margin: 15px 19px;
-  display:flex;  
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+.card {
+  background: #191c29;  
+  padding: 3px;
   position: relative;
-  right: 0px;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;    
+  cursor: pointer;
+  font-family: cursive;    
+  margin: 10px;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
   
 }
-.itens-down{  
-  margin: 15px 19px;
-  display:block;  
-  position: relative;   
-  right: 0px; 
+
+
+.card:hover {
+  color: rgb(250, 88, 88);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  
+}
+
+.card::before {
+  content: "";
+  width: 114%;
+  height: 112%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  left: -8%;
+  animation: spin 2.5s linear infinite;
+}
+.cards::before {
+  content: "";
+  width: 114%;
+  height: 112%;
+  border-radius: 100%;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -6%;
+  left: -7%;
+  animation: spin 2.5s linear infinite;
+}
+
+
+.card::after {
+  position: absolute;
+  content: " ";  
+  left: 0;
+  right: 0;
+  z-index: -1;  
+  transform: scale(0.8);
+  filter: blur(calc(10 / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
