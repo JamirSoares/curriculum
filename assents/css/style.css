@@ -1,3 +1,4 @@
+<<<<<<< HEAD
         body {
             background: radial-gradient(#0a0064 7%, #010000 100%);
             background-size: 100%;
@@ -173,3 +174,222 @@
                 bottom: 100%;
             }
         }
+=======
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(#250043 0%, #050047 100%);
+    color:white;
+    scroll-behavior: smooth;    
+}
+
+.box {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+}
+
+.box .left-side {
+  font-size: 1em;
+  flex-grow: 0;
+  flex-basis: auto;
+  border-right: solid;
+  border-width:1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+}
+#photo{
+color: white;
+  font-size: 1em;
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border-width: 1px;
+  background-image: url("/assents/imagens/photos.jpg") ;
+  background-size:100% ;
+  
+}
+.text{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1.5em;
+}
+.name{  
+  position: relative;
+  left: 0px;  
+  margin-bottom: 0px;  
+}
+.description{
+  font-size:0.9em ;
+  margin-top: 0px;
+}
+.icons{
+  margin: 10px;
+  width:  30px;
+}
+
+.box .mid {
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.home{
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: left;   
+}
+#texto{
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .text-box{  
+  width: 400px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-self: ce;
+  right: 400px; 
+}
+.home img{
+  width: 500px;
+  position: absolute;
+  left: 450px;
+}
+
+.projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100vh;
+}
+.projects img{
+  margin-right:100vh ;  
+}
+
+.box .right-side {
+    flex-grow: 0;
+    flex-basis: 100px;
+    border-left: solid;
+    border-width:1px;
+    display: flex;
+    position: fixed;
+    right: 0px;
+    height: 100vh;
+    justify-content: center;    
+  }
+  
+.bottom{
+  position: absolute;
+  bottom: 50px;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+.card {
+  background: #191c29;  
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;    
+  cursor: pointer;
+  font-family: cursive;    
+  margin: 10px;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  
+}
+
+
+.card:hover {
+  color: rgb(250, 88, 88);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  
+}
+
+.card::before {
+  content: "";
+  width: 114%;
+  height: 112%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  left: -8%;
+  animation: spin 2.5s linear infinite;
+}
+.cards::before {
+  content: "";
+  width: 114%;
+  height: 112%;
+  border-radius: 100%;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -6%;
+  left: -7%;
+  animation: spin 2.5s linear infinite;
+}
+
+
+.card::after {
+  position: absolute;
+  content: " ";  
+  left: 0;
+  right: 0;
+  z-index: -1;  
+  transform: scale(0.8);
+  filter: blur(calc(10 / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+>>>>>>> 102b7e5b0969836d4274040a47e95ed61a7468dd
