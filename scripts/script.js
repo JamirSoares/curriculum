@@ -1,13 +1,5 @@
-$(document).ready(function() {
-    $('.back-to-top').css('display', 'none')
-    $('body').scroll(function() {
-        if ($(this).scrollTop() == 0) {
-            $('.back-to-top').css('display', 'none')
-        } else {
-            $('.back-to-top').css('display', 'block')
-        }
-    })
-    $('.back-to-top').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 800)
-    })
-})
+$(document).ready(function(){
+	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+	});
+});
