@@ -2,7 +2,7 @@ html,
 body {
     height: 100vh;
     margin: 0;
-    background: radial-gradient(#250043 0%, #050047 100%);
+    background: radial-gradient(#2d0060 0%, #28007f 100%);
     color:white;
     scroll-behavior: smooth;    
 }
@@ -140,6 +140,25 @@ color: white;
 }
 .card {
   background: #191c29;  
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;    
+  cursor: pointer;
+  font-family: cursive;    
+  margin: 10px;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  
+}
+
+.text-box .card {
+  
   padding: 3px;
   position: relative;
   border-radius: 6px;
